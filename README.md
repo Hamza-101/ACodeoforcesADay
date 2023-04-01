@@ -1,1 +1,1 @@
-# ACodeoforcesADay
+# Python Scripts
