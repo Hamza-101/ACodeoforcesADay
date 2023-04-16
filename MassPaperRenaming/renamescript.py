@@ -3,8 +3,8 @@ from PyPDF2 import PdfReader as pdf_reader
 import shutil
 
 # specify the input and output folder paths
-input_folder_path = "C:\Users\Cr7th\Desktop\dr"
-output_folder_path = "C:\Users\Cr7th\Desktop\DronesNames"
+input_folder_path = r"C:\Users\Cr7th\Desktop\dr"
+output_folder_path = r"C:\Users\Cr7th\Desktop\DronesNames"
 titles=[]
 # create the output folder if it doesn't exist
 if not os.path.exists(output_folder_path):
