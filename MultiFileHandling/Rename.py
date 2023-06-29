@@ -1,34 +1,26 @@
 import os
 from PyPDF2 import PdfReader as pdf_reader
-import shutil
 
-# specify the input and output folder paths
-input_folder_path = r"C:\Users\Cr7th\Desktop\dr"
-output_folder_path = r"C:\Users\Cr7th\Desktop\DronesNames"
-titles=[]
-# create the output folder if it doesn't exist
-if not os.path.exists(output_folder_path):
-    os.makedirs(output_folder_path)
+# Specify the input and output location-paths
+Input_Folder = "C:/Users/Cr7th/Desktop/"
+Output_Folder = "C:/Users/Cr7th/Desktop/"
+files=[]
 
-# iterate over each file in the input folder
-for filename in os.listdir(input_folder_path):
-    # check if the file is a PDF
-    if filename.endswith(".pdf"):
-        file_path = os.path.join(input_folder_path, filename)
 
-        # open the PDF and extract the title
-        with open(file_path, 'rb') as file:
+# Create the output folder if it doesn't exist
+if not os.path.exists(Output_Folder):
+    os.makedirs(Output_Folder)
+
+# Iterate over each file at the input path
+for Output_Folder in os.listdir(Input_Folder):
+
+    # Check the file extension if PDF or not
+    if Output_Folder.endswith(".pdf"):
+        FilePath = os.path.join(Input_Folder, Output_Folder)
+
+        # Open the PDF and extract the title
+        with open(FilePath, 'rb') as file:
             pdf = pdf_reader(file)
-            titles.append(pdf.metadata.title)
-            titles.append(",")
-            print(titles)
-        # # create a new filename based on the title
-        # if(title!=None):
-        #     new_filename = title.strip().replace(" ", "_") + ".pdf"
-        #     new_file_path = os.path.join(output_folder_path, new_filename)
-
-        #     # copy the file to the output folder with the new filename
-        #     shutil.copyfile(file_path, new_file_path)
-            
-        #     # print a message to indicate which file was renamed
-        #     print(f"{filename} -> {new_filename}")
+            files.append(pdf.metadata.title)
+            files.append(",")
+            print(files)
