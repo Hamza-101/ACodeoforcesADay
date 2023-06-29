@@ -2,7 +2,7 @@ import os
 from PyPDF2 import PdfReader as pdf_reader
 
 # Specify the input and output location-paths
-Input_Folder = "{Input-File Directory}"
+Input_Folder = ""     #Input file directory
 files=[]
 
 # Iterate over each file at the input path
