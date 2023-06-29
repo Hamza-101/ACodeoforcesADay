@@ -2,14 +2,8 @@ import os
 from PyPDF2 import PdfReader as pdf_reader
 
 # Specify the input and output location-paths
-Input_Folder = "C:/Users/Cr7th/Desktop/"
-Output_Folder = "C:/Users/Cr7th/Desktop/"
+Input_Folder = "{Input-File Directory}"
 files=[]
-
-
-# Create the output folder if it doesn't exist
-if not os.path.exists(Output_Folder):
-    os.makedirs(Output_Folder)
 
 # Iterate over each file at the input path
 for Output_Folder in os.listdir(Input_Folder):
